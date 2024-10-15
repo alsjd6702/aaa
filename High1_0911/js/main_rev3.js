@@ -14,21 +14,25 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+
 let wd =$(window).width()
+
 $(window).resize(function(){
-  let wd =$(window).width()
+  let wd =$(window).width();
+
   if(wd>=995){
     document.querySelector("header nav").style.left = "0";
+  } else{
+    document.querySelector("header nav").style.left = "-450px";
   }
-})
-document.querySelector("header nav > p").onclick = function(){
-  document.querySelector("header nav").style.left = "-450px";
-            
-};
+});
 
+document.querySelector("header nav > p").onclick = function(){
+  document.querySelector("header nav").style.left = "-450px";            
+};
 document.querySelector(".topmenu").onclick = function(){
     document.querySelector("header nav").style.left = "0";
-}
+};
 
 // if(window.innerWidth <= 994){
 //     document.querySelector(".topmenu").onclick = function(){
