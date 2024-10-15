@@ -1,0 +1,697 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+div.Above{
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+    animation: AfterIntroBG 1s ease-in-out 6s forwards;
+}
+@keyframes AfterIntroBG {
+    100%{background: transparent; z-index: -1;}
+}
+
+div.Above div.Con_Top div.Con_Top_Text{
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    justify-content: center;
+    animation: ConTopText 1s ease-in-out 6s forwards;
+}
+@keyframes ConTopText {
+    100%{opacity: 0;}
+}
+div.Above div.Con_Top div.Con_Top_Text p.Name{
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;    
+    color: #fff;
+    word-wrap: break-word;
+    line-height: 82px;
+    padding-top: 25px;
+    animation: Name 2s ease-in-out 1.5s forwards;
+    scale: 10;
+    opacity: 0;
+    transform-origin: center 0;
+    font-family: "Bebas Neue", sans-serif;
+}
+@keyframes Name {
+    100%{transform: scale(0.1); opacity: 1;}
+}
+div.Con_Top div.Con_Top_Text p.Name span:first-of-type{
+    color: rgb(43, 80, 245);
+}
+div.Con_Top div.Con_Top_Text p.Name span:nth-of-type(2){
+    color: rgb(241, 229, 53);
+}
+div.Con_Top div.Con_Top_Text p.Name span:nth-of-type(3){
+    color: rgb(243, 81, 41);
+}
+
+div.Con_Top div.Con_Top_Text div{
+    position: absolute;
+    animation: AfterIntroOp 1s ease-in-out 6s forwards;
+}
+@keyframes AfterIntroOp {
+    100%{opacity: 0;}
+}
+div.Con_Top div.Con_Top_Text div span{
+    font-family: "Bebas Neue", sans-serif; 
+}
+div.Con_Top div.Con_Top_Text div.Name_Word1{    
+    left: 37.2%;
+    top: 26px;
+}
+div.Con_Top div.Con_Top_Text div.Name_Word2{
+    top: 272px;
+    left: 44%;
+}
+div.Con_Top div.Con_Top_Text div.Name_Word3{
+    top: 518px;
+    left: 49.52%;
+}
+
+div.Con_Top div.Con_Top_Text div > span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 70px;
+    font-weight: bold;
+}
+div.Con_Top div.Con_Top_Text div span.Word_White{
+    color: #fff;
+    opacity: 0;
+    transition: 1s;
+    animation: NameWord 1s ease-in-out 3.2s forwards;
+}
+@keyframes NameWord {
+    100%{opacity: 1;}
+}
+div.Con_Top div.Con_Top_Text div span.Word_Color{
+    width: 0;
+    overflow: hidden;
+    animation: NameWordColor 1s ease-in-out 3.7s forwards;
+}
+@keyframes NameWordColor {
+    100%{width: 500px;}
+}
+div.Con_Top div.Con_Top_Text div.Name_Word1 span.Word_White span,
+div.Con_Top div.Con_Top_Text div.Name_Word1 span.Word_Color{
+    color: rgb(43, 80, 245);
+}
+div.Con_Top div.Con_Top_Text div.Name_Word2 span.Word_White span,
+div.Con_Top div.Con_Top_Text div.Name_Word2 span.Word_Color{
+    color: rgb(241, 229, 53);
+}
+div.Con_Top div.Con_Top_Text div.Name_Word3 span.Word_White span,
+div.Con_Top div.Con_Top_Text div.Name_Word3 span.Word_Color{
+    color: rgb(243, 81, 41);
+}
+
+div.main_bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+div.main_bg div.btn{
+    width: 160px;
+    position: absolute;
+    left: 0;
+    top: 0;    
+    padding: 10px;
+    opacity: 0;
+    animation: btn 1s ease-in-out 6s forwards;    
+    z-index: 200;
+}
+@keyframes btn {
+    100%{opacity: 1;}
+}
+div.main_bg div.btn > p.Sign_Img{
+    width: 92px;
+    height: 42px;
+    padding: 10px;
+}
+div.main_bg div.btn > p.Sign_Img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.main_bg div.btn ul#menu{
+    padding: 0 0 0 10px;
+}
+div.main_bg div.btn ul#menu li{
+    padding: 5px 0;
+}
+div.main_bg div.btn ul#menu li a{
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+div.main_bg div.btn ul#menu li a:hover{
+    color: rgb(0, 225, 255);
+}
+
+div.After_Intro_Name{
+    position: absolute;
+    z-index: 500;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 40px;
+    height: 100%;    
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    animation: AfterIntroName 1s ease-in-out 6s forwards;
+}
+@keyframes AfterIntroName {
+    100%{opacity: 1;}
+}
+div.After_Intro_Name p.Intro_Name{
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;    
+    color: #fff;
+    word-wrap: break-word;
+    line-height: 82px;
+    padding-top: 25px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+
+@property --progress{
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+}
+:root{
+    --c1: #6eccee;
+    --c2: #f672ca;
+    --c3: #fdb428;
+    --c4: #b9f;
+}
+  
+@-webkit-keyframes progress{
+    from{
+      --progress: 0%;
+    }
+    to{
+      --progress: 100%;
+    }
+}
+  
+@keyframes progress{
+    from{
+      --progress: 0%;
+    }
+    to{
+      --progress: 100%;
+    }
+}
+.circle{
+    --progress: 60%;
+    background: conic-gradient(at center, var(--c1) var(--progress), black var(--progress), var(--c2) calc(var(--progress) + 20%), var(--c3) calc(var(--progress) + 30%), var(--c3) calc(var(--progress) + 50%), transparent, transparent, transparent, transparent);
+    -webkit-animation: progress 4s linear infinite;
+            animation: progress 4s linear infinite;
+    border-radius: 50%;
+    -webkit-mask: radial-gradient(circle at center, transparent 65%, black 65%);
+            mask: radial-gradient(circle at center, transparent 65%, black 65%);
+    position: absolute;
+    inset: 0;
+}
+@supports (background: paint(houdini)){
+    .circle{
+      --progress: 0%;
+    }
+}
+.circle:nth-child(2){
+    inset: 20px;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+}
+.circle:nth-child(3){
+    inset: 40px;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+}
+  
+.container{
+    filter: drop-shadow(0 0 0.8vmin black);
+    position: relative;
+    width: 30vmin;
+    aspect-ratio: 1;
+    opacity: 0.6;
+}
+.container:after{
+    content: "";
+    font-weight: bold;
+    position: absolute;
+    font-size: 2.5vmin;
+    inset: 0;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+/* div#fullpage div#section0{
+} */
+div#fullpage div#section0 div.fp-tableCell{
+    display: flex;
+}
+div#fullpage div#section0 div.fp-tableCell > div{
+    flex: 1 1 50%;
+}
+div#fullpage div#section0 div.Intro_Left{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Img{
+    position: relative;
+    width: 100%;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    top: 80px;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(2){
+    left: 39%;
+    top: 110px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 70px rgba(255,255,255,0.5);
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Img > div p{
+    width: 300px;
+    height: 300px;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Img > div p img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+div#fullpage div#section0 div.Intro_Left div.Intro_Txt{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 13%;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #fff;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Txt h1{
+    color: rgb(169, 235, 255);
+    text-align: center;
+    padding-bottom: 20px;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Txt p{
+    font-size: 20px;
+    font-weight: 400;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Txt p span{
+    font-weight: 500;
+}
+
+div#fullpage div#section0 div.Intro_Right{
+    width: 100%;
+    height: 100%;
+    padding-left: 50px;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+    color: rgb(169, 235, 255);
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+div#fullpage div#section0 div.Intro_Right h1{
+    color: rgb(169, 235, 255);
+    padding: 10px 0 0 10px;
+    box-sizing: border-box;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item{
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 100px 0 50px;
+    box-sizing: border-box;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div{
+    display: flex;
+    justify-content: space-between;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage p{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    text-align: center;
+    line-height: 130px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage{
+    position: relative;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg circle{
+    position: absolute;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+}
+@keyframes Percentage100 {
+    0%{stroke-dashoffset: 440;}
+    100%{stroke-dashoffset: 0;}
+}
+@keyframes Percentage90 {
+    0%{stroke-dashoffset: 440;}
+    100%{stroke-dashoffset: 20;}
+}
+@keyframes Percentage80 {
+    0%{stroke-dashoffset: 440;}
+    100%{stroke-dashoffset: 90;}
+}
+@keyframes Percentage70 {
+    0%{stroke-dashoffset: 440;}
+    100%{stroke-dashoffset: 160;}
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item1 div.Percentage:first-child svg circle{
+    animation: Percentage100 2s ease-in-out 6.5s forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item1 div.Percentage:last-child svg circle{
+    animation: Percentage90 2s ease-in-out 6.5s forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item2 div.Percentage:first-child svg circle{
+    animation: Percentage90 2s ease-in-out 6.5s forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item2 div.Percentage:last-child svg circle{
+    animation: Percentage90 2s ease-in-out 6.5s forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item3 div.Percentage:first-child svg circle{
+    animation: Percentage80 2s ease-in-out 6.5s forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item3 div.Percentage:last-child svg circle{
+    animation: Percentage80 2s ease-in-out 6.5s forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item4 div.Percentage:first-child svg circle{
+    animation: Percentage70 2s ease-in-out 6.5s forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item4 div.Percentage:last-child svg circle{
+    animation: Percentage70 2s ease-in-out 6.5s forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item5 div.Percentage:first-child svg circle{
+    animation: Percentage70 2s ease-in-out 6.5s forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item5 div.Percentage:last-child svg circle{
+    animation: Percentage70 2s ease-in-out 6.5s forwards;
+}
+
+/* div#fullpage div#section0 div.Intro_Right div.Skill_Item p{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(#fff,#fff), 
+    linear-gradient(120deg, #fff 0%, #fff 30%, red 30%, red 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+} */
+
+div#fullpage div.section{
+    position: relative;
+}
+div#fullpage div.section div.myContent{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+}
+div#fullpage div.section div.myContent > div{
+    flex: 1 1 50%;
+    position: relative;
+}
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content h1{
+    text-align: right;
+    color: #fff;
+    padding: 30px 100px 40px 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content h1{    
+    color: rgb(237, 190, 255);
+    animation: TitleColor1 3s ease-in-out infinite;
+}
+@keyframes TitleColor1 {
+    0%{color: rgb(237, 190, 255);}
+    30%{color: rgb(211, 101, 255);}
+    60%{color: #fff;}
+    90%{color: rgb(237, 190, 255);}
+}
+div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content h1{    
+    color: #3162d6;
+    animation: TitleColor2 3s ease-in-out infinite;
+}
+@keyframes TitleColor2 {
+    0%{color: #3162d6;}
+    30%{color: #0e4ad6;}
+    60%{color: #fff;}
+    90%{color: #3162d6;}
+}
+div#fullpage div#section3 div.myContent div.Section_Left div.Left_Content h1{    
+    color: #b0f7d8;
+    animation: TitleColor3 3s ease-in-out infinite;
+}
+@keyframes TitleColor3 {
+    0%{color: #b0f7d8;}
+    30%{color: #166d47;}
+    60%{color: #fff;}
+    90%{color: #b0f7d8;}
+}
+/* color: #0ba360, #3cba92; */
+
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+}
+div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Content_Img{
+    width: 80%;
+}
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img div.device{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device{
+    display: flex;
+}
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div{
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.computer{
+    position: relative;
+    top: 100px;
+}
+div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.computer{
+    flex: 1 1 50%;
+    position: relative;
+    top: 170px;
+}
+div#fullpage div#section3 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.computer{
+    position: relative;
+    top: 70px;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.phone{
+    position: absolute;    
+    width: 18%;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.tablet{
+    position: absolute;
+    width: 30%;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.phone{
+    left: 15%;
+    top: 1%;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.tablet{
+    right: 7%;
+    top: 0;
+}
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div p{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div p:first-child img{
+    width: 100%;
+    object-fit: cover;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.computer p:nth-child(2){
+    width: 568px;
+    position: relative;
+    top: 45px;
+    left: 49px;
+    transform: rotate(-3.5deg);
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.phone p:nth-child(2){
+    width: 75px;
+    position: relative;
+    left: 21.5px;
+    top: 13px;
+    transform: rotate(-15deg);
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.tablet p:nth-child(2){
+    width: 142px;
+    position: relative;
+    left: 30px;
+    top: 23px;
+    transform: rotate(12deg);
+}
+div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.computer p:nth-child(2){
+    width: 323px;
+    position: relative;
+    left: 29px;
+    top: 26px;
+    transform: rotate(-3.5deg);
+}
+div#fullpage div#section3 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.computer p:nth-child(2){
+    width: 568px;
+    position: relative;
+    top: 44px;
+    left: 49px;
+    transform: rotate(-3.5deg);
+}
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div p:nth-child(2) img{
+    width: 100%;
+    object-fit: contain;
+}
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div p:nth-child(2) a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+/* div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child,
+div#fullpage div#section3 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child{
+    padding-top: 70px;
+} */
+
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content h1{
+    color: #fff;
+    padding: 30px 0 40px 100px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content h1{
+    color: rgb(237, 190, 255);
+    animation: TitleColor1 3s ease-in-out infinite;
+}
+div#fullpage div#section2 div.myContent div.Section_Right div.Right_Content h1{
+    color: #3162d6;
+    animation: TitleColor2 3s ease-in-out infinite;
+}
+div#fullpage div#section3 div.myContent div.Section_Right div.Right_Content h1{
+    color: #b0f7d8;
+    animation: TitleColor3 3s ease-in-out infinite;
+}
+
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt{
+    padding: 90px 90px 0 110px;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #fff;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table{
+    border-collapse: collapse;
+}
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr:last-child th,
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr:last-child td{
+    border-bottom: none;
+}
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th,
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr td{
+    border-bottom: 1px solid #fff;
+    font-size: 20px;
+    word-break: keep-all;
+}
+div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th,
+div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr td{
+    border-bottom: 1px solid rgb(237, 190, 255);
+}
+div#fullpage div#section2 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th,
+div#fullpage div#section2 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr td{
+    border-bottom: 1px solid #3162d6;
+}
+div#fullpage div#section3 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th,
+div#fullpage div#section3 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr td{
+    border-bottom: 1px solid #b0f7d8;
+}
+
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th{
+    width: 30%;
+    color: #fff;
+}
+div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th{
+    color: rgb(237, 190, 255);
+}
+div#fullpage div#section2 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th{
+    color: #3162d6;
+}
+div#fullpage div#section3 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th{
+    color: #b0f7d8;
+}
+
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr td{
+    padding: 20px 5px;
+    font-weight: 400;
+}

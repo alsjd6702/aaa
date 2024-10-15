@@ -1,0 +1,1066 @@
+@charset  "utf-8";
+
+@font-face {
+    font-family: high1WonchuriTitleB;
+    src: url(../High1_webfonts/high1WonchuriTitleB.woff) format("woff");
+}
+@font-face {
+    font-family: high1WonchuriTitleM;
+    src: url(../High1_webfonts/high1WonchuriTitleM.woff) format("woff");
+}
+@font-face {
+    font-family: high1WonchuriBodyR;
+    src: url(../High1_webfonts/high1WonchuriBodyR.woff) format("woff");
+}
+@font-face {
+    font-family: NotoSansKR-Regular;
+    src: url(../High1_webfonts/NotoSansKR-Regular.woff) format("woff");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+header{
+    width: 100%;
+    max-width: 1900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999;
+}
+header div.top{
+    width: 100%;
+    height: 40px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(54, 54, 54, 0.5);
+}
+header:hover div.top{
+    background: rgba(206, 206, 206, 0.9);
+}
+header div.top div.topmenulogo{
+    width: 150px;
+    display: none;
+    align-items: center;
+}
+header div.top div.topmenulogo div.topmenu{
+    width: 25px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 20px;
+    cursor: pointer;
+}
+header div.top div.topmenulogo div.topmenu p{
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+header:hover div.top div.topmenulogo div.topmenu p{
+    background: #000;
+}
+header div.top div.topmenulogo a{
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    overflow: hidden;    
+}
+header div.top div.topmenulogo a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 4px;
+}
+header:hover div.top div.topmenulogo a img{
+    object-position: center -37px;
+}
+header div.top ul.left,
+header div.top ul.right{
+    display: flex;
+    gap: 20px;
+}
+header div.top ul li{
+    font-size: 0;
+}
+header div.top ul li a{
+    font-family: high1WonchuriBodyR;
+    font-size: 15px;
+    color: #fff;
+}
+header:hover div.top ul li a{
+    color: #000;
+}
+header div.top ul li:hover a{
+    font-weight: bold;
+    color: #452b50
+}
+header nav{
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 10%;
+    background: rgba(54, 54, 54, 0.5);
+    align-items: center;
+    position: relative;
+    left: 0;
+}
+header:hover nav{
+    background: rgba(206, 206, 206, 0.9);
+}
+header:hover nav > a img{
+    object-position: center -49px;
+}
+header nav > a{
+    display: inline-block;
+    width: 115px;
+    height: 40px;
+}
+header nav > a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+header nav > p{
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+header nav ul.menu{
+    display: flex;
+    flex: 1 1 100%;
+    height: 73px;
+}
+header nav ul.menu > li{    
+    position: relative;
+    width: 12%;
+    text-align: center;
+}
+header nav ul.menu > li > a{
+    display: inline-block;
+    padding-top: 17px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    font-family: high1WonchuriTitleM;
+    font-size: 18px;
+    color: #fff;
+}
+header:hover nav ul.menu > li > a{
+    color: #000;
+}
+header nav ul.menu > li:nth-child(2) > a,
+header nav ul.menu > li:nth-child(3) > a,
+header nav ul.menu > li:nth-child(6) > a,
+header nav ul.menu > li:nth-child(7) > a{
+    line-height: 44px;
+}
+header nav ul.menu > li:hover > a{
+    color: #452b50;
+    border-bottom: 2px solid #452b50;
+}
+header nav ul.menu > li ul.sub{
+    position: absolute;
+    left: 0;
+    top: 73px;
+    width: 100%;
+    z-index: 999;
+    height: 0;
+    transition: 0.3s;
+    overflow: hidden;
+    /* 392px */
+}
+header nav ul.menu > li ul.sub li a{
+    display: inline-block;
+    width: 100%;
+    line-height: 35px;
+    font-family: high1WonchuriBodyR;
+    color: #000;
+    font-size: 16px;
+}
+header nav ul.menu > li:nth-child(7) ul.sub li a{
+    line-height: 35px;
+}
+header nav ul.menu > li:nth-child(1) ul.sub li:first-child a,
+header nav ul.menu > li:nth-child(2) ul.sub li:first-child a,
+header nav ul.menu > li:nth-child(3) ul.sub li:first-child a,
+header nav ul.menu > li:nth-child(4) ul.sub li:first-child a,
+header nav ul.menu > li:nth-child(5) ul.sub li:first-child a,
+header nav ul.menu > li:nth-child(6) ul.sub li:first-child a,
+header nav ul.menu > li:nth-child(7) ul.sub li:first-child a{
+    padding-top: 7px;
+}
+header nav ul.menu > li:nth-child(7) ul.sub li:nth-child(2) a,
+header nav ul.menu > li:nth-child(7) ul.sub li:nth-child(3) a{
+    padding-top: 0;
+}
+header nav ul.menu > li ul.sub li:hover a{
+    font-weight: bold;
+    color: #452b50;
+}
+
+header nav div.bg{
+    position: absolute;
+    left: 0;
+    top: 73px;
+    width: 100%;
+    background: rgba(236, 236, 236, 0.9);
+    height: 0;
+    transition: 0.3s;    
+    /* 400px */
+}
+header nav ul.menu:hover > li ul.sub{
+    height: 392px;
+}
+header nav ul.menu:hover ~ div.bg{
+    height: 400px;
+}
+
+div.contents div.info{
+    position: relative;
+    top: -113px;
+}
+
+.swiper{
+    width: 100%;
+    height: 100%;    
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-pagination-bullet{
+    width: 17px;
+    height: 17px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
+}
+.swiper-pagination-bullet-active {
+    background: #007aff;
+}
+
+div.contents div.maincontent{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+    position: relative;
+    top: -60px;
+    display: flex;
+    justify-content: space-between;
+}
+div.contents div.maincontent div.notice{
+    width: 30%;
+}
+div.contents div.maincontent div.notice > p{
+    font-size: 20px;
+    font-family: high1WonchuriTitleM;
+    padding-bottom: 30px;
+    position: relative;
+}
+div.contents div.maincontent div.notice > p::after{
+    content: "╋";
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    border: 1px solid;
+    text-align: center;
+    line-height: 30px;
+    font-family: NotoSansKR-Regular;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    transform: translateY(-20%);
+    cursor: pointer;
+}
+/* div.contents div.maincontent div.notice > p:hover::after{
+    color: #fff;
+    background: #452b50;
+    border: 1px solid #452b50;
+} */
+div.contents div.maincontent div.notice ul.noticesub li{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+div.contents div.maincontent div.notice ul.noticesub li a{
+    flex: 1 1 70%;
+}
+div.contents div.maincontent div.notice ul.noticesub li a p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 95%;
+}
+div.contents div.maincontent div.notice ul.noticesub li a:hover > p{
+    font-weight: bold;
+}
+div.contents div.maincontent div.notice ul.noticesub li a:hover ~ p{
+    font-weight: bold;
+}
+div.contents div.maincontent div.notice ul.noticesub li p{
+    font-family: high1WonchuriBodyR;
+    font-size: 16px;
+}
+
+div.contents div.maincontent div.event{
+    width: 65%;
+}
+div.contents div.maincontent div.event > p{
+    font-size: 20px;
+    font-family: high1WonchuriTitleM;
+    padding-bottom: 20px;
+    position: relative;
+}
+div.contents div.maincontent div.event > p::after{
+    content: "╋";
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    border: 1px solid;
+    text-align: center;
+    line-height: 30px;
+    font-family: NotoSansKR-Regular;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    transform: translateY(-20%);
+    cursor: pointer;
+}
+div.contents div.maincontent div.event ul.eventsub{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+div.contents div.maincontent div.event ul.eventsub li{
+    flex: 1 1 30%;
+    cursor: pointer;
+}
+div.contents div.maincontent div.event ul.eventsub li div.imgbox{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+}
+div.contents div.maincontent div.event ul.eventsub li div.imgbox::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(225,255,255,0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+div.contents div.maincontent div.event ul.eventsub li div.imgbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -7px center;
+}
+div.contents div.maincontent div.event ul.eventsub li div.imgbox > img{
+    filter: blur(10px);
+}
+div.contents div.maincontent div.event ul.eventsub li div.imgbox p.blurbox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+    clip-path: inset(0);
+    z-index: 2;
+}
+div.contents div.maincontent div.event ul.eventsub li:hover div.imgbox p.blurbox{
+    clip-path: inset(5px round 90px 90px 50px 50px);
+}
+
+div.contents div.maincontent div.event ul.eventsub li p.eventtxt{
+    font-family: high1WonchuriBodyR;
+    line-height: 25px;
+    font-size: 16px;
+}
+div.contents div.maincontent div.event ul.eventsub li:hover p.eventtxt{
+    font-weight: bold;
+}
+
+div.contents div.contentmenu{
+    width: 100%;
+    background: rgb(51, 51, 51);
+}
+div.contents div.contentmenu div.contentmenu_bg{
+    width: 97%;
+    margin: 0 auto;
+    background-image: url(/High1_0911/High1_images/conmenu_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px 0;
+}
+div.contents div.contentmenu div.contentmenu_bg div.contentmenu_txt{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+div.contents div.contentmenu div.contentmenu_bg div.contentmenu_txt > p{
+    font-family: high1WonchuriBodyR;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+div.contents div.contentmenu div.contentmenu_bg div.contentmenu_txt > h1{
+    font-family: high1WonchuriTitleM;
+    padding: 20px 0 70px;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+}
+div.contents div.contentmenu div.conmenubtn{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+div.contents div.contentmenu div.conmenubtn > div{
+    display: flex;
+    gap: 10px;
+}
+div.contents div.contentmenu div.conmenubtn div.btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    position: relative;
+    cursor: pointer;
+}
+div.contents div.contentmenu div.conmenubtn div.btn::after{
+    content: "";
+    width: 100px;
+    height: 100px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-51%,-33%);
+    animation: moving 0.7s ease-in-out alternate infinite;
+}
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:nth-child(4):after{    
+    transform: translate(-51%,-33%);    
+}
+div.contents div.contentmenu div.conmenubtn div.btn p:first-child{
+    padding-bottom: 50px;
+    background-image: url(/High1_0911/High1_images/conmenubtn.png);
+    background-repeat: no-repeat;
+    position: relative;
+    animation: moving 0.7s ease-in-out alternate infinite;
+}
+@keyframes moving {
+    0%{top: -3px;}
+    100%{top: 3px;}
+}
+
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_top div.btn:first-child p:first-child{
+    background-position: -411px -4px;
+    width: 33px;
+    height: 43px;
+}
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_top div.btn:nth-child(2) p:first-child{
+    background-position: 0 -7px;
+    width: 25px;
+    height: 43px;
+}
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_top div.btn:nth-child(3) p:first-child{
+    background-position: -70px -4px;
+    width: 27px;
+    height: 43px;
+}
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:first-child p:first-child{
+    background-position: -138px -7px;
+    width: 36px;
+    height: 43px;
+}
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:nth-child(2) p:first-child{
+    background-position: -215px -5px;
+    width: 27px;
+    height: 43px;
+}
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:nth-child(3) p:first-child{
+    background-position: -285px -5px;
+    width: 30px;
+    height: 43px;
+    position: relative;
+    top: -5px;
+}
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:nth-child(4) p:first-child{
+    background-position: -347px -12px;    
+    width: 36px;
+    height: 30px;
+    position: relative;
+    top: -7px;
+}
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:nth-child(4){
+    padding-top: 11px;
+}
+div.contents div.contentmenu div.conmenubtn div.btn p:nth-child(2){
+    color: #fff;
+    font-family: high1WonchuriBodyR;
+    font-size: 16px;
+}
+div.contents div.contentmenu div.conmenubtn div.btn:hover p:nth-child(2){
+    font-weight: bold;
+}
+
+div.contents div.contentinfo{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 30px 50px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+div.contents div.contentinfo div{
+    flex: 1 1 50%;
+}
+div.contents div.contentinfo div h2{
+    font-family: high1WonchuriTitleM;
+    font-weight: normal;
+}
+div.contents div.contentinfo div p{
+    font-family: high1WonchuriBodyR;
+    padding: 10px 0 0;
+    font-size: 16px;
+}
+div.contents div.contentinfo div.sns p{
+    font-family: high1WonchuriBodyR;
+    padding-bottom: 20px;
+}
+div.contents div.contentinfo div.sns div.snsimg{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+div.contents div.contentinfo div.sns div.snsimg p{
+    width: 20px;
+    background-image: url(/High1_0911/High1_images//sns.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    transition: 0.3s;
+}
+div.contents div.contentinfo div.sns div.snsimg p:hover{
+    top: -5px;
+}
+div.contents div.contentinfo div.sns div.snsimg p:first-child{
+    background-position: -160px 0;
+}
+div.contents div.contentinfo div.sns div.snsimg p:nth-child(2){
+    background-position: -115px 0;
+}
+div.contents div.contentinfo div.sns div.snsimg p:nth-child(3){
+    background-position: -77px 0;
+}
+div.contents div.contentinfo div.sns div.snsimg p:nth-child(4){
+    background-position: -35px 0;
+}
+div.contents div.contentinfo div.weather div.weatherimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.contents div.contentinfo div.weather div.weatherimg p:first-child img{
+    width: 80px;
+    cursor: pointer;
+}
+div.contents div.contentinfo div.weather div.weatherimg p:nth-child(2){
+    font-size: 30px;
+    padding-left: 20px;
+    box-sizing: border-box;    
+    cursor: pointer;
+}
+div.contents div.contentinfo div.weather div.weatherimg:hover p img{
+    animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+footer{
+    width: 100%;
+    background: #000;
+    padding: 30px 0 70px;
+}
+footer div.foottxt{
+    width: 100%;    
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+footer div.foottxt p:first-child{
+    display: inline-block;
+    width: 140px;
+    height: 60px;
+    margin-bottom: 30px;
+}
+footer div.foottxt p:first-child img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+footer div.foottxt div.footmenu{
+    width: 77%;
+    padding: 30px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+footer div.foottxt div.footmenu a{
+    color: #fff;
+    word-break: keep-all;
+    margin-right: 15px;
+    font-size: 14px;
+    font-family: NotoSansKR-Regular;
+    line-height: 25px;
+}
+footer div.foottxt div.footmenu a:nth-child(4),
+footer div.foottxt div.footmenu a:nth-child(5){
+    color: #DFAC11;
+}
+footer div.foottxt div.footinfo{
+    padding: 30px 0;
+    display: flex;
+    gap: 70px;
+}
+footer div.foottxt div.footinfo ul li{
+    color: #999;
+    font-size: 14px;
+    font-family: NotoSansKR-Regular;
+    line-height: 22px;
+}
+footer div.foottxt p:last-child{
+    color: #999;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 1400px){
+    header nav{
+        gap: 5%;
+    }
+    header nav ul.menu > li{
+        width: 13.5%;
+    }
+    header nav ul.menu > li > a{
+        font-size: 17px;
+    }
+    .swiper-pagination-bullet{
+        width: 15px;
+        height: 15px;
+    }
+}
+@media (max-width: 1280px){
+    header nav ul.menu > li > a{
+        font-size: 16px;
+    }
+    header nav ul.menu > li ul.sub li a{
+        font-size: 15px;
+    }
+    div.contents div.maincontent div.notice{
+        width: 40%;
+    }
+    div.contents div.maincontent div.event{
+        width: 55%;
+    }
+    div.contents div.maincontent div.event ul.eventsub li{
+        flex: 1 1 40%;
+    }
+    div.contents div.maincontent div.event ul.eventsub li:last-child{
+        display: none;
+    }
+}
+@media (max-width: 1150px){
+    div.contents div.contentmenu div.conmenubtn{
+        flex-direction: column;
+        align-items: center;
+    }
+    div.contents div.contentmenu div.conmenubtn div.conmenubtn_top{
+        padding-bottom: 70px;
+    }
+}
+@media (max-width: 1080px){
+    header div.top ul li a{
+        font-size: 14px;
+    }
+    header nav ul.menu > li > a{
+        font-size: 15px;
+    }
+    header nav ul.menu > li ul.sub li a{
+        font-size: 14px;
+    }
+    .swiper-pagination-bullet{
+        width: 13px;
+        height: 13px;
+    }
+    div.contents div.maincontent div.notice ul.noticesub li{
+        padding-bottom: 15px;
+    }
+    div.contents div.maincontent div.notice ul.noticesub li p{
+        font-size: 15px;
+    }
+    div.contents div.maincontent div.event ul.eventsub li div.imgbox{
+        margin-bottom: 5px;
+    }
+    div.contents div.maincontent div.event ul.eventsub li p.eventtxt{
+        font-size: 15px;
+    }
+    div.contents div.contentmenu div.contentmenu_bg div.contentmenu_txt > p{
+        font-size: 18px;
+    }
+    div.contents div.contentmenu div.contentmenu_bg div.contentmenu_txt > h1{
+        font-size: 30px;
+        padding: 20px 0 50px;
+    }
+    div.contents div.contentmenu div.conmenubtn{
+        gap: 0;
+    }
+    div.contents div.contentmenu div.conmenubtn div.conmenubtn_top{
+        padding-bottom: 60px;
+    }
+    div.contents div.contentmenu div.conmenubtn div.btn::after{
+        width: 80px;
+        height: 80px;
+        transform: translate(-52%,-29%);
+    }
+    div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:nth-child(4):after{
+        transform: translate(-51%,-29%);
+    }
+    div.contents div.contentmenu div.conmenubtn div.btn p:first-child{
+        padding-bottom: 30px;
+    }
+    footer{
+        padding: 30px 0 50px;
+    }
+    footer div.foottxt p:first-child{        
+        margin-bottom: 20px;
+    }
+    footer div.foottxt div.footmenu{
+        padding: 20px 0;
+    }
+    footer div.foottxt div.footinfo{
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 0;
+    }
+    footer div.foottxt p:last-child{
+        padding: 0;
+    }
+}
+@media (max-width: 994px){
+    header div.top ul.left,
+    header div.top ul.right{
+        gap: 10px;
+    }
+    header div.top ul li a{
+        font-size: 13px;
+    }
+    header div.top ul.left{
+        display: none;
+    }
+    header div.top div.topmenulogo{
+        display: flex;
+    }
+    header nav{
+        width: 450px;
+        height: 100%;
+        left: -450px;
+        top: 0;
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: baseline;
+        background: #fff;
+        position: fixed;
+        gap: 0;
+    }
+    header:hover nav{
+        background: #fff;
+    }
+    header nav > a{
+        width: 90px;
+        padding-bottom: 20px;
+    }
+    header nav > p{
+        display: block;
+        position: absolute;
+        top: 2.1%;
+        right: 5%;
+    }
+    header nav > a img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center -42px;
+    }
+    header:hover nav > a img{
+        object-position: center -42px;
+    }
+    header nav ul.menu{
+        flex-direction: column;
+        width: 100%;
+    }
+    header nav ul.menu > li{
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
+    header nav ul.menu > li:first-child{
+        border-top: 1px solid #eee;
+    }
+    header nav ul.menu > li:last-child{
+        border-bottom: none;
+    }
+    header nav ul.menu > li > a{
+        color: #000;
+        line-height: 22px;
+        padding: 20px 10px;
+        text-align: left;
+    }
+    header nav ul.menu > li:nth-child(2) > a,
+    header nav ul.menu > li:nth-child(3) > a,
+    header nav ul.menu > li:nth-child(6) > a,
+    header nav ul.menu > li:nth-child(7) > a{
+        line-height: 22px;
+    }
+    header nav ul.menu > li:hover > a{
+        border-bottom: none;
+    }
+    header nav ul.menu > li > a br{
+        display: none;
+    }
+
+    header nav ul.menu > li ul.sub{
+        opacity: 1;
+        width: 70%;
+        height: 62px;
+        display: flex;
+        flex-wrap: wrap;
+        top: 0;
+        left: 140px;
+        transition: 0;
+        column-gap: 20px;
+        overflow: visible;
+    }
+    header nav ul.menu > li ul.sub li a{        
+        line-height: 0;
+    }
+    header nav ul.menu > li:nth-child(1) ul.sub li:first-child a,
+    header nav ul.menu > li:nth-child(3) ul.sub li:first-child a,
+    header nav ul.menu > li:nth-child(5) ul.sub li:first-child a,
+    header nav ul.menu > li:nth-child(6) ul.sub li:first-child a
+    {
+        padding: 30px 0;
+    }
+    header nav ul.menu > li:nth-child(1) ul.sub li a,
+    header nav ul.menu > li:nth-child(3) ul.sub li a,
+    header nav ul.menu > li:nth-child(5) ul.sub li a,
+    header nav ul.menu > li:nth-child(6) ul.sub li a{
+        padding: 30px 0;
+    }
+    header nav ul.menu > li:nth-child(7) ul.sub li:nth-child(2) a,
+    header nav ul.menu > li:nth-child(7) ul.sub li:nth-child(3) a{
+        padding-top: 7px;
+    }
+    header nav ul.menu:hover > li ul.sub{
+        height: 62px;
+    }
+    header nav div.bg{
+        display: none;
+    }
+
+    div.contents div.info{
+        top: -40px;
+    }
+
+    div.contents div.maincontent{
+        top: 0px;
+        padding-bottom: 30px;
+    }
+    div.contents div.maincontent div.notice > p{
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+    div.contents div.maincontent div.notice ul.noticesub li{        
+        padding-bottom: 12px;
+    }
+    div.contents div.maincontent div.notice ul.noticesub li a{
+        flex: 0 0;
+        width: 70%;
+    }
+    div.contents div.maincontent div.notice ul.noticesub li a p{
+        width: 100%;
+    }
+    div.contents div.maincontent div.event > p{
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+    div.contents div.maincontent div.event ul.eventsub li p.eventtxt{
+        line-height: 22px;
+    }
+    /* div.contents div.contentmenu{
+    } */
+    div.contents div.contentmenu div.conmenubtn div.btn p:nth-child(2){
+        font-size: 15px;
+    }
+    div.contents div.contentinfo{
+        padding: 17px 50px 10px;
+    }
+    div.contents div.contentinfo div h2{
+        font-size: 18px;
+    }
+    div.contents div.contentinfo div p{
+        font-size: 15px;
+    }
+}
+@media (max-width: 914px){
+    div.contents div.maincontent div.notice ul.noticesub li a{
+        width: 60%;
+    }
+}
+@media (max-width: 814px){
+    .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
+    }
+    div.contents div.maincontent{
+        flex-direction: column;
+    }
+    div.contents div.maincontent div.notice{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    div.contents div.maincontent div.event{
+        width: 100%;
+    }
+    div.contents div.maincontent div.event > p{
+        padding-bottom: 20px;
+    }
+    div.contents div.maincontent div.event ul.eventsub li:last-child{
+        display: block;
+    }
+    div.contents div.contentmenu{
+        top: -40px;
+    }
+    div.contents div.contentinfo{
+        top: -15px;
+    }
+}
+@media (max-width: 714px){
+    header div.top{
+        padding: 0 10px;
+    }
+    header div.top ul.left,
+    header div.top ul.right{
+        gap: 8px;
+    }
+    header div.top ul li a{
+        font-size: 12px;
+    }
+    header div.top div.topmenulogo div.topmenu{
+        width: 22px;
+        padding-right: 15px;
+    }
+    div.contents div.maincontent{
+        padding: 0 30px 20px;
+    }
+    div.contents div.maincontent div.event ul.eventsub li:last-child{
+        display: none;
+    }
+    div.contents div.maincontent div.event ul.eventsub li div.imgbox{        
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 612px) {
+    div.swiper-button-next::after,
+    div.swiper-button-prev::after{
+        font-size: 25px;
+    }
+    .swiper-pagination-bullet{
+        width: 8px;
+        height: 8px;
+    }
+    div.contents div.contentmenu div.conmenubtn > div{
+        gap: 0;
+    }
+    div.contents div.contentmenu div.conmenubtn div.btn{
+        width: 120px;
+    }
+    div.contents div.contentinfo{        
+        padding: 20px;
+    }
+    div.contents div.contentinfo div.sns > p{
+        font-size: 14px;
+    }
+    div.contents div.contentinfo div.weather div.weatherimg p:first-child img{
+        width: 60px;
+    }
+    div.contents div.contentinfo div.weather div.weatherimg p:nth-child(2){
+        font-size: 25px;
+    }
+    footer{
+        padding: 20px 0 30px;
+    }
+    footer div.foottxt{        
+        padding: 0 20px;
+    }
+    footer div.foottxt p:first-child{
+        width: 120px;
+        height: 52px;
+        margin-bottom: 10px;
+    }
+    footer div.foottxt div.footmenu{
+        padding: 10px 0;
+    }
+    footer div.foottxt div.footmenu a{
+        font-size: 13px;
+    }
+    footer div.foottxt div.footinfo{
+        padding: 10px 0;
+    }
+    footer div.foottxt div.footinfo ul li{
+        font-size: 13px;
+    }
+    footer div.foottxt p:last-child{
+        font-size: 13px;
+    }
+}
